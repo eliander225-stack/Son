@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.LiaMp3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#0a0a12</item>
+        <item name="android:navigationBarColor">#0a0a12</item>
+    </style>
+    <style name="Theme.LiaMp3.Fullscreen" parent="Theme.LiaMp3">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "Cyber Anime Music Player",
+  "description": "Futuristic Cyber Anime & Gamer Audio Player with local music library scanning, Web Audio spectrum visualizers, 10-band equalizer, nightcore & slowed+reverb effects, and gamer soundboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

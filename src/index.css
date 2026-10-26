@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cyber: 'Rajdhani', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-outfit: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-outfit);
+    background-color: #0a0a12;
+    color: #e2e8f0;
+  }
+}
+
+.font-cyber {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-mono-cyber {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Cyberpunk Glows & Accents */
+.neon-glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.45), 0 0 30px rgba(6, 182, 212, 0.15);
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.45), 0 0 30px rgba(236, 72, 153, 0.15);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8), 0 0 16px rgba(34, 211, 238, 0.4);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 8px rgba(244, 114, 182, 0.8), 0 0 16px rgba(244, 114, 182, 0.4);
+}
+
+.neon-border-cyan {
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: inset 0 0 10px rgba(34, 211, 238, 0.1), 0 0 12px rgba(34, 211, 238, 0.2);
+}
+
+/* Cyber CRT Scanline Overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+  box-shadow: 0 0 8px #06b6d4;
+}
+
+/* Cyber Range Sliders */
+input[type="range"] {
+  accent-color: #06b6d4;
+}
+
+/* Vinyl rotation animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-slow-paused {
+  animation: spin-slow 20s linear infinite;
+  animation-play-state: paused;
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14" />
+      <stop offset="50%" stop-color="#0f0f20" />
+      <stop offset="100%" stop-color="#07070d" />
+    </linearGradient>
+
+    <!-- Neon Cyan to Pink Gradient -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+
+    <!-- Inner Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Badge -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" stroke="#00f3ff" stroke-width="4" stroke-opacity="0.4" />
+
+  <!-- Inner Tech Border Rings -->
+  <circle cx="256" cy="220" r="160" fill="none" stroke="#ff007f" stroke-width="2" stroke-dasharray="8 6" opacity="0.3" />
+  <circle cx="256" cy="220" r="140" fill="none" stroke="#00f3ff" stroke-width="1.5" opacity="0.4" />
+
+  <!-- Glowing Play Triangle -->
+  <polygon points="200,140 360,220 200,300" fill="url(#neonGrad)" filter="url(#glow)" />
+  <polygon points="215,165 330,220 215,275" fill="#0c0c1a" />
+  <polygon points="230,185 295,220 230,255" fill="url(#neonGrad)" />
+
+  <!-- Text "LiaMp3" -->
+  <text x="256" y="420" font-family="'Rajdhani', 'Outfit', sans-serif" font-weight="900" font-size="64" letter-spacing="4" fill="#ffffff" text-anchor="middle">
+    LIA<tspan fill="#00f3ff">MP3</tspan>
+  </text>
+  <text x="256" y="455" font-family="'JetBrains Mono', monospace" font-size="16" letter-spacing="3" fill="#ff007f" text-anchor="middle" opacity="0.9">
+    GAMER AUDIO // SYSTEM
+  </text>
+</svg>
